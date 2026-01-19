@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import profileImg from '../assets/profile.png';
+import profileImg from '../assets/profile.jpg';
 
 const Hero = () => {
   const [text, setText] = useState('');

@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import ajMartImg from '../assets/ajmart.png';
+import { projectsData } from '../data/projectsData';
 
 const Projects = () => {
     const sectionRef = useRef(null);
@@ -27,62 +27,7 @@ const Projects = () => {
         return () => observer.disconnect();
     }, []);
 
-    const projects = [
-        {
-            title: 'AJ Mart E-Commerce',
-            description: 'Complete e-commerce platform with product management, shopping cart, payment integration, and admin dashboard.',
-            image: ajMartImg,
-            tech: ['React.js', 'Laravel', 'MySQL', 'Tailwind CSS', 'REST API'],
-            link: '#',
-            github: '#',
-            featured: true
-        },
-        {
-            title: '360 Market Multi-Vendor',
-            description: 'Advanced multi-vendor marketplace with vendor management, product listings, order tracking, and analytics.',
-            image: 'https://via.placeholder.com/600x400/667eea/ffffff?text=360+Market',
-            tech: ['React.js', 'PHP', 'Laravel', 'Redux', 'Bootstrap'],
-            link: '#',
-            github: '#',
-            featured: true
-        },
-        {
-            title: 'Medical Clinic Management',
-            description: 'Comprehensive clinic management system with appointment scheduling, patient records, and employee management.',
-            image: 'https://via.placeholder.com/600x400/764ba2/ffffff?text=Clinic+System',
-            tech: ['React.js', 'Laravel', 'MySQL', 'Chart.js'],
-            link: '#',
-            github: '#',
-            featured: true
-        },
-        {
-            title: 'NFC Business Cards',
-            description: 'Digital business card solution with NFC technology, QR codes, and contact sharing capabilities.',
-            image: 'https://via.placeholder.com/600x400/f093fb/ffffff?text=NFC+Cards',
-            tech: ['React.js', 'NFC', 'QR Code API', 'Tailwind CSS'],
-            link: '#',
-            github: '#',
-            featured: false
-        },
-        {
-            title: 'Doctor Portfolio Website',
-            description: 'Professional portfolio website for medical practitioners with appointment booking and service showcase.',
-            image: 'https://via.placeholder.com/600x400/4facfe/ffffff?text=Doctor+Portfolio',
-            tech: ['React.js', 'Tailwind CSS', 'Animation'],
-            link: '#',
-            github: '#',
-            featured: false
-        },
-        {
-            title: 'Corporate Dashboard',
-            description: 'Analytics dashboard with real-time data visualization, reporting, and team collaboration features.',
-            image: 'https://via.placeholder.com/600x400/f5576c/ffffff?text=Dashboard',
-            tech: ['React.js', 'ApexCharts', 'Laravel', 'WebSocket'],
-            link: '#',
-            github: '#',
-            featured: false
-        }
-    ];
+
 
     return (
         <section id="projects" ref={sectionRef} className="section-padding bg-gradient-to-b from-indigo-950/20 to-transparent">
@@ -100,7 +45,7 @@ const Projects = () => {
 
                 {/* Projects Grid */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-                    {projects.map((project, index) => (
+                    {projectsData.map((project, index) => (
                         <div
                             key={index}
                             className="glass-effect rounded-2xl overflow-hidden card-hover reveal group"

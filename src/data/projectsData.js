@@ -1,5 +1,5 @@
 // Import project images
-import ajMartImg from '../assets/projects/ajmart.png';
+import ajMartImg from '../assets/ajmart.png';
 // Add more imports as you add project images
 // import project2Img from '../assets/projects/project2.png';
 // import project3Img from '../assets/projects/project3.png';
@@ -74,21 +74,3 @@ export const projectsData = [
     }
 ];
 
-/**
- * How to add a new project:
- * 
- * 1. Add your project image to: src/assets/projects/
- * 2. Import the image at the top of this file:
- *    import myProjectImg from '../assets/projects/myproject.png';
- * 
- * 3. Add a new object to the projectsData array:
- *    {
- *        title: 'My Project Name',
- *        description: 'Description of my project',
- *        image: myProjectImg,
- *        tech: ['React', 'Node.js', 'MongoDB'],
- *        link: 'https://myproject.com',
- *        github: 'https://github.com/username/myproject',
- *        featured: true
- *    }
- */
